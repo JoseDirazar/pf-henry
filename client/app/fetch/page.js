@@ -5,13 +5,13 @@ const fetchingData = () => {return fetch('http://localhost:3001/events').then(re
 export default async function FetchEvents({ params }) {
     const post = await fetchingData()
     return(
-    <main>
+    <>
       {post.events.map(event => {
         return <>
           <h1>{event.title}</h1>
           <h2>{event.type}</h2>
         </>
       })}
-    </main>
+    </>
   )
 }
