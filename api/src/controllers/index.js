@@ -1,6 +1,9 @@
 const getEvents = require('./getEvents')
-
+const {signupUser, loginUser, protectedUser,} = require('./user')
 
 module.exports = {
-    getEvents
+    getEvents,
+    signupUser,
+    loginUser,
+    protectedUser,
 }
