@@ -11,7 +11,12 @@ module.exports = (sequelize) => {
         name:{
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        tickets:{
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
+        
     },{
         timestamps: false
     })

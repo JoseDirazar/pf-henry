@@ -14,7 +14,13 @@ module.exports = (sequelize) => {
         },
         password:{
             type: DataTypes.STRING
-        }
+        },
+        cart:{
+            //type: DataTypes.ARRAY(DataTypes.STRING),
+            type: DataTypes.ARRAY(DataTypes.ARRAY(DataTypes.STRING)),
+            allowNull: true,
+            defaultValue: [] 
+          },
     },{
         timestamps: false
     })

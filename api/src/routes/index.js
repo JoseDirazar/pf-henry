@@ -3,13 +3,13 @@ const router = Router();
 const events = require("./events")
 const users = require('./users');
 const verifyToken = require('../utils/verifyToken');
-const mercadopago = require("./mercadopago"); // x*xx**xxx***
+const mercadopago = require("./mercadopago"); 
+
+router.use("/", events)
+router.use('/', users)
 
 router.use('/protected', verifyToken)
-router.use("/protected", events)
-router.use("/pagar", mercadopago); // x*xx**xxx***
+router.use("/protected/pagar", mercadopago); 
 
-
-router.use('/', users)
 
 module.exports = router;
