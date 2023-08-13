@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const routes = require('./routes/index.js');
-const verifyToken = require('./utils/verifyToken')
+
 
 require('./db.js');
 
@@ -23,7 +23,7 @@ server.use((req, res, next) => {
   next();
 });
 
-server.use("/protected", verifyToken);
+
 server.use('/', routes);
 
 // Error catching endware.
