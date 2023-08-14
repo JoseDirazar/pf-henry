@@ -1,8 +1,12 @@
+
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Link from 'next/link'
+
 
 const inter = Inter({ subsets: ['latin'] })
+
+import { Providers } from './redux/provider'
+import NavBar from './NavBar/NavBar'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,11 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <nav>
-          <Link href='/'>Home</Link>
-          <Link href='/fetch'>Eventos</Link>
-        </nav>
-        {children}
+        <Providers>
+          <NavBar />
+          {children}
+        </Providers>
         </body>
     </html>
   )
