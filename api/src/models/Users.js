@@ -20,7 +20,10 @@ module.exports = (sequelize) => {
             type: DataTypes.ARRAY(DataTypes.ARRAY(DataTypes.STRING)),
             allowNull: true,
             defaultValue: [] 
-          },
+        },
+        name:{
+            type: DataTypes.STRING
+        }
     },{
         timestamps: false
     })
