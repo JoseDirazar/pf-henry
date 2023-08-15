@@ -16,7 +16,26 @@ module.exports = (sequelize) => {
             type: DataTypes.INTEGER,
             allowNull: false
         },
-        
+        site:{
+            type: DataTypes.TEXT,
+            validate:{
+                isUrl: true,
+            }
+        },
+        image:{
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate:{
+              isUrl: true,
+            }
+          },
+        description:{
+            type: DataTypes.TEXT,
+            allowNull: false
+        },
+        date:{
+            type: DataTypes.DATEONLY
+        }
     },{
         timestamps: false
     })
