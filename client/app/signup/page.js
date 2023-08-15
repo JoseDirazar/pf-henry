@@ -30,7 +30,7 @@ export default function SignUp() {
         submit()
       }
   return (
-    <form onSubmit={onSubmit} className="max-w-sm mx-auto p-6 bg-white shadow-md rounded-md">
+    <form onSubmit={onSubmit} className="max-w-sm mx-auto p-6 bg-black shadow-md rounded-md">
       <h1 className="text-2xl font-semibold mb-4">SignUp</h1>
       
       <div className="mb-4">

@@ -41,7 +41,7 @@ export default function Login() {
     }
   }, [token]);
   return (
-    <>
+    <div className="flex flex-col align-start">
       <div className="text-center text-2xl font-semibold mt-8">Login</div>
       <form
         className="max-w-sm mx-auto p-6 bg-white shadow-md rounded-md"
@@ -77,6 +77,6 @@ export default function Login() {
    SignUp
   </Link>
 </h2>
-    </>
+    </div>
   );
 }
