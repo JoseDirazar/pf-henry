@@ -30,15 +30,39 @@ export default function SignUp() {
         submit()
       }
   return (
-    <form onSubmit={onSubmit}>
-        <h1>SignUp</h1>
-        <br />
-        <label>Email</label>
-        <input key='email' type='email' name="email" onChange={handleInputs} value={inputs.email}></input>
-        <br></br>
-        <label>Password</label>
-        <input key='password' type='password' name="password" onChange={handleInputs} value={inputs.password}></input>
-        <button type='submit'>Submit</button>
-      </form>
+    <form onSubmit={onSubmit} className="max-w-sm mx-auto p-6 bg-white shadow-md rounded-md">
+      <h1 className="text-2xl font-semibold mb-4">SignUp</h1>
+      
+      <div className="mb-4">
+        <label className="block text-gray-700 font-semibold mb-2">Email</label>
+        <input
+          className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+          key="email"
+          type="email"
+          name="email"
+          onChange={handleInputs}
+          value={inputs.email}
+        />
+      </div>
+      
+      <div className="mb-6">
+        <label className="block text-gray-700 font-semibold mb-2">Password</label>
+        <input
+          className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
+          key="password"
+          type="password"
+          name="password"
+          onChange={handleInputs}
+          value={inputs.password}
+        />
+      </div>
+
+      <button
+        className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-md"
+        type="submit"
+      >
+        Submit
+      </button>
+    </form>
   )
 }

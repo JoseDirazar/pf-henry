@@ -16,9 +16,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className='flex justify-between flex-col p-10 gap-5 min-h-screen'>
         <Providers>
+          <header>
           <NavBar />
+          </header>
           {children}
         </Providers>
         </body>

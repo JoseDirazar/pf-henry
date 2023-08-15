@@ -10,22 +10,22 @@ export default function Home() {
   const count  = useSelector(state => state.counter.value)
   const dispatch = useDispatch()
 
+  const styles ="bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md"
   
 
   
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-     
-      <button onClick={() => dispatch(increment())}>
+      <Link href='/login' className='bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded'>Login</Link>
+      <button className={styles} onClick={() => dispatch(increment())}>
         increment
       </button>
       <span>
         {count}
       </span>
-      <button onClick={() => dispatch(decrement())}>
+      <button className={styles} onClick={() => dispatch(decrement())}>
         decrement
       </button>
-    <Link href='/login'>Login</Link>
     </main>
   )
 }
