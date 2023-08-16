@@ -32,14 +32,14 @@ export default function Login() {
     }
     submit();
   }
-  const token = localStorage.getItem("token");
   useEffect(() => {
+    const token = localStorage?.getItem("token");
     if (token) {
       console.log("Estoy logueado:", token);
     } else {
       console.log("Token no encontrado en el LocalStorage");
     }
-  }, [token]);
+  }, []);
   return (
     <div className="flex flex-col align-start">
       <div className="text-center text-2xl font-semibold mt-8">Login</div>
@@ -47,7 +47,7 @@ export default function Login() {
         className="max-w-sm mx-auto p-6 bg-white shadow-md rounded-md"
         onSubmit={onSubmit}
       >
-        <div class="mb-4">
+        <div className="mb-4">
           <label className="block text-gray-700 font-semibold mb-2">Email</label>
           <input className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-500"
             key="email"

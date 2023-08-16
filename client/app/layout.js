@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='flex justify-center flex-col p-10 gap-5 min-h-screen'>
-        <Providers>
           <header>
           <NavBar />
           </header>
+        <Providers>
           {children}
         </Providers>
         </body>
