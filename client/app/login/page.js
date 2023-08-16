@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import axios from "axios";
 import Link from "next/link";
 import { useState, useEffect } from "react";
